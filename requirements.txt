@@ -1,0 +1,12 @@
+pin
+numpy
+matplotlib
+open3d
+trimesh
+tensorboard
+networkx
+click
+tqdm
+pyyaml
+gtimer
+gym==0.17.3

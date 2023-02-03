@@ -91,9 +91,9 @@ def get_path_collector(variant, expl_env, eval_env, policy, eval_policy):
     return expl_path_collector, eval_path_collector
 
 
-def sac(variant):
-    expl_env = gym.make(variant["env_name"])
-    eval_env = gym.make(variant["env_name"])
+def sac(variant, expl_env=None, eval_env=None):
+    expl_env = expl_env or gym.make(variant["env_name"])
+    eval_env = eval_env or gym.make(variant["env_name"])
     expl_env.seed(variant["seed"])
     eval_env.set_eval()
 
